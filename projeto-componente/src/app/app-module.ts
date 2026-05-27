@@ -3,14 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { Card } from './card/card';
-import { CardRoxo } from './card-roxo/card-roxo';
-import { CardButton } from './card-button/card-button';
-import { CardRoxoButton } from './card-roxo-button/card-roxo-button';
+import { CardsModule } from './cards/cards-module';
 
 @NgModule({
-  declarations: [App, Card, CardRoxo, CardButton, CardRoxoButton],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [App],
+  imports: [BrowserModule, AppRoutingModule, CardsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
