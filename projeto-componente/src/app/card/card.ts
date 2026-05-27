@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
 
+interface IPlano{
+  infos: IInfos;
+}
+
+interface IInfos{
+  tipo: string;
+  preco: number;
+}
+
 @Component({
   selector: 'app-card',
   standalone: false,
@@ -7,10 +16,11 @@ import { Component } from '@angular/core';
   styleUrl: './card.scss',
 })
 export class Card {
-  plano = {
+  // @ts-ignore
+  plano: Iplano = {
     infos: {
-      tipo: 'Simples',
-      preco: 100,
+      tipo: "Simples",
+      preco: 100
     }
-  }
+  };
 }
