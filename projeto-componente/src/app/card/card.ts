@@ -14,7 +14,7 @@ interface IInfos{
   standalone: false,
   templateUrl: './card.html',
   styleUrl: './card.scss',
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class Card {
   // @ts-ignore
