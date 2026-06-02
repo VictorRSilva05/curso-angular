@@ -8,37 +8,11 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   protected readonly title = signal('property-binding');
-  inputText = "Texto Inicial Alterado";
-  inputType = "text";
-  isDisabled = false;
+  buttontitle = 'Título do botão';
+  buttonDisable = false;
 
-  enableInput(){
-    this.isDisabled = false;
-  }
-
-  disableInput(){
-    this.isDisabled = true;
-  }
-
-  setPasswordTypeInput(){
-    this.inputType = 'password';
-  }
-
-  setTextTypeInput(){
-    this.inputType = 'text';
-  }
-
-  logInputText(){
-    console.log(this.inputText)
-  }
-
-  handleInputKeyup(event: KeyboardEvent){
-    const currentText = (event.target as HTMLInputElement).value;
-    console.log(currentText);
-  }
-
-  handleInputEvent(event: Event){
-    const currentText = (event.target as HTMLInputElement).value;
-    console.log(event)
+  onButtonClick(){
+    this.buttontitle = 'Título ALTERADO';
+    this.buttonDisable = !this.buttonDisable;
   }
 }
