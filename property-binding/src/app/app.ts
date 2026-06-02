@@ -31,4 +31,14 @@ export class App {
   logInputText(){
     console.log(this.inputText)
   }
+
+  handleInputKeyup(event: KeyboardEvent){
+    const currentText = (event.target as HTMLInputElement).value;
+    console.log(currentText);
+  }
+
+  handleInputEvent(event: Event){
+    const currentText = (event.target as HTMLInputElement).value;
+    console.log(event)
+  }
 }
