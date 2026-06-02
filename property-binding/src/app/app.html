@@ -1,5 +1,20 @@
-<button [attr.title]="buttontitle">Teste</button>
+<button style="width: 100px; background-color: aqua;">Botão 0</button>
 
-<button [attr.disabled]="buttonDisable ? true : null">Disabled</button>
+<button [style.width]="widthButton1" [style.background-color]="'blue'">Botão 0</button>
 
-<button (click)="onButtonClick()">Mudar props</button>
+<button [style.width.px]="widthButton2" [style.background-color]="'pink'">Botão 0</button>
+
+<button [style]="'width: 140px; background-color: brown;'">Botão 3</button>
+
+<button [style]="{width: '150px', backgroundColor:'orange' }">Botão 4</button>
+
+<button [style]="stylesObj">Botão 5</button>
+
+<br/>
+
+<button (click)="updateStyleObj()">Atualizar obj</button>
+
+<button (click)="updateStyleObjectCorrect()">Atualizar obj correto</button>
+
+<button (click)="updateWidth()">Atualizar width</button>
+
